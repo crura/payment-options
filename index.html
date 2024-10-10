@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy the Bride a Drink!</title>
     <style>
         body {
@@ -11,24 +10,25 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             padding: 50px;
+            overflow: hidden; /* Prevent scrollbars */
         }
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
-            color: #ff6347; /* Tomato color for a spooky effect */
-            text-shadow: 2px 2px #ff0000; /* Red shadow for extra spookiness */
+            color: #ff6347;
+            text-shadow: 2px 2px #ff0000;
         }
         ul {
             list-style: none;
             padding: 0;
         }
         li {
-            margin: 20px 0; /* Add margin to create space between links */
+            margin: 20px 0;
         }
         a {
             display: inline-block;
-            width: 200px; /* Fixed width for buttons */
-            color: #00ff00; /* Neon green for a ghostly look */
+            width: 200px;
+            color: #00ff00;
             font-size: 1.5em;
             text-decoration: none;
             border: 2px solid #00ff00;
@@ -40,10 +40,50 @@
             background-color: #00ff00;
             color: #000;
         }
+        /* Ghost Styles */
+        .ghost {
+            position: fixed;
+            width: 100px;
+            opacity: 0.7;
+            animation: floatGhost 15s infinite;
+        }
+        .ghost1 {
+            top: 20%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        .ghost2 {
+            top: 50%;
+            left: 110%;
+            animation-delay: 5s;
+            animation-direction: reverse;
+        }
+        .ghost3 {
+            top: 80%;
+            left: -10%;
+            animation-delay: 10s;
+        }
+        @keyframes floatGhost {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(110vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Buy the Bride a Drink!</h1>
+
+    <!-- Spooky Ghosts -->
+    <img src="ghost.png" alt="Spooky Ghost" class="ghost ghost1">
+    <img src="ghost.png" alt="Spooky Ghost" class="ghost ghost2">
+    <img src="ghost.png" alt="Spooky Ghost" class="ghost ghost3">
+
     <ul>
         <li><a href="https://venmo.com/u/Chris-Rura">Pay with Venmo</a></li>
         <li><a href="https://cash.app/$BewitchedBach">Pay with Cash App</a></li>
